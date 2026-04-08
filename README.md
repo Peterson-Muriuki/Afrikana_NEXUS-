@@ -1,6 +1,6 @@
-# NEXUS — Universal Intelligence Platform
+# Afrikana-NEXUS - Universal Intelligence Platform
 
-> **Flagship portfolio project** | WorldQuant MScFE Program  
+> **Flagship portfolio project** | MScFE   
 > An integrated financial intelligence platform covering credit risk, portfolio optimization, ALM, fraud detection, customer analytics, and macro early warning - deployable across any industry.
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)](https://python.org)
@@ -11,7 +11,7 @@
 
 ## What NEXUS is
 
-NEXUS consolidates **8 prior portfolio projects** into a single, production-grade Streamlit application. Every module reflects a direct MScFE course connection and targets a real fintech/banking decision.
+Afrikana-NEXUS consolidates **8 prior portfolio projects** into a single, production-grade Streamlit application. Every module reflects a direct MScFE connection and targets a real fintech/banking decision.
 
 | Module | Source Project | MScFE Course Connection |
 |---|---|---|
@@ -43,27 +43,25 @@ NEXUS consolidates **8 prior portfolio projects** into a single, production-grad
 
 ```
 nexus/
-├── app.py                    # Streamlit entry point & routing
+├── app.py                    
 ├── requirements.txt
 ├── .streamlit/
-│   └── config.toml           # Dark theme configuration
+│   └── config.toml          
 ├── core/
-│   └── data_engine.py        # Unified synthetic data generation
-│                               (credit, fraud, portfolio, ALM,
-│                                macro, customer, market)
+│   └── data_engine.py        
+│                               
+│                                
 └── pages/
-    ├── home.py               # Platform overview & KPI dashboard
-    ├── credit.py             # Credit scoring & EL computation
-    ├── fraud.py              # 3-tier verification pipeline
-    ├── portfolio.py          # Portfolio optimization & ESG
-    ├── alm.py                # ALM, duration gap, NIM sensitivity
-    ├── risk_warning.py       # Macro early warning system
-    ├── market.py             # Yield curve & market risk
-    ├── customer.py           # Churn, LTV/CAC, segmentation
-    └── industry_sim.py       # Industry-specific reconfiguration
+    ├── home.py               
+    ├── credit.py             
+    ├── fraud.py             
+    ├── portfolio.py         
+    ├── alm.py                
+    ├── risk_warning.py       
+    ├── market.py             
+    ├── customer.py          
+    └── industry_sim.py       
 ```
-
----
 
 ## Quickstart
 
