@@ -1,0 +1,51 @@
+name: NEXUS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install flake8
+
+      - name: Lint
+        run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+      - name: Smoke test — data engine
+        run: |
+          python -c "
+          from core.data_engine import (
+            generate_loan_applications, generate_fraud_applications,
+            generate_portfolio_assets, generate_alm_data,
+            generate_macro_signals, generate_customers,
+            generate_yield_curve, generate_market_returns,
+          )
+          print('loan:', len(generate_loan_applications(50)))
+          print('fraud:', len(generate_fraud_applications(50)))
+          a, r = generate_portfolio_assets(8)
+          print('assets:', len(a), 'returns shape:', r.shape)
+          d = generate_alm_data()
+          print('ALM equity:', d['equity_M'])
+          print('macro:', len(generate_macro_signals(12)))
+          print('customers:', len(generate_customers(100)))
+          yc = generate_yield_curve('baseline')
+          print('yield curve points:', len(yc))
+          mrets = generate_market_returns(60)
+          print('market returns shape:', mrets.shape)
+          print('All data engine checks passed.')
+          "
