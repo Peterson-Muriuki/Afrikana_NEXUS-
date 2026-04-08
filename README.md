@@ -103,8 +103,8 @@ No API keys required. All data is synthetic and generated at runtime.
 - 3-tier cost-optimised pipeline:
   - **Tier 1 (Free):** SIM age, velocity, device value, application hour
   - **Tier 2 (KES 20):** Telco verification, digital footprint
-  - **Tier 3 (KES 70):** CRB check — only for borderline cases
-- Saves 60–70% on verification costs vs checking everyone with CRB
+  - **Tier 3 (KES 70):** CRB check - only for borderline cases
+- Saves 60-70% on verification costs vs checking everyone with CRB
 
 ### Portfolio & ESG
 - Markowitz mean-variance optimisation with **ESG score constraint**
