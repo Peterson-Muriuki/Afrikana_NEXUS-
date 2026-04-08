@@ -13,7 +13,7 @@
 
 Afrikana-NEXUS consolidates **8 prior portfolio projects** into a single, production-grade Streamlit application. Every module reflects a direct MScFE connection and targets a real fintech/banking decision.
 
-| Module | Source Project | MScFE Course Connection |
+| Module | Source Project | MScFE |
 |---|---|---|
 | Credit Intelligence | `kenya-credit-scoring`, `KenyaCreditAI` | Econometrics, ML |
 | Fraud & Verification | `smart-credit-verifier` | ML in Finance |
